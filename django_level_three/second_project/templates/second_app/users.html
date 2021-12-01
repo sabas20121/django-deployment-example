@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css'%}">
+</head>
+<body>
+    <h1>sabas these are your users for second project</h1>
+    {% if users %}
+        <ol>
+            {% for person in users %}
+                <li>User Info</li>    
+                    <ul>
+                        <li>First Name: {{person.first_name}}</li>
+                        <li>First Name: {{person.last_name}}</li>
+                        <li>First Name: {{person.user_mail}}</li>
+                    </ul>
+
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h2>RECORD DOES NOT FOUND</h2>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signup</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+  
+        
+          <!--   <h1>SABAS these are your users for second project :</h1>
+            {% if users %}
+            <div class="jumbotron">
+                <ol>
+                    {% for person in users %}
+                        <li>User Info</li>    
+                            <ul>
+                                <li>First Name: {{person.first_name}}</li>
+                                <li>Last Name: {{person.last_name}}</li>
+                                <li>Email: {{person.user_mail}}</li>
+                            </ul>
+
+                    {% endfor %}
+                </ol>
+            {% else %}
+                <h2>RECORD DOES NOT FOUND</h2>
+            {% endif %} -->
+        <h1>Fill The Form</h1>
+        <div class="container">
+            <div class="jumbotron">
+                <form method ="POST">
+                    {{form.as_p}}
+                    {% csrf_token %}
+                    <input type="submit" class="btn btn-primary" value="Submit">
+                </form>
+            </div>       
+            
+        </div>
+    </div>
+</body>
+</html>

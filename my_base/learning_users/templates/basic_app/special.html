@@ -1,0 +1,12 @@
+{% extends "basic_app/base.html" %}
+{% block body_block %}
+<!-- {% if user.is_authenticated %}
+<li><a class="navbar-link" href="{% url 'logout' %}">logout</a></li>
+{% endif %} -->
+  <div class="jumboltron">
+
+    <h1> WELLCOME TO SPECIAL PAGE</h1>
+    <H2>BECAUSE YOU ARE SPECIAL</H2>
+    {% csrf_token %}
+  </div>
+{% endblock body_block %}
